@@ -76,8 +76,8 @@ code { padding: 1px 6px; border-radius: 5px; background: var(--ice-100); font: 6
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand-mark { width: 42px; height: 42px; color: currentColor; }
-.brand-mark .logo-ship, .office-watermark .logo-ship { fill: currentColor; }
-.site-header .brand-mark .logo-ship, .site-footer .brand-mark .logo-ship { fill: var(--accent); }
+/* The logo is drawn via <use>, so its ship colour is set through a custom property. */
+.site-header .brand-mark, .site-footer .brand-mark, .hero-track-icon { --logo-ship: var(--accent); }
 .brand-text { display: grid; line-height: 1.1; }
 .brand-name { font: 800 18px var(--font-display); letter-spacing: .02em; }
 .brand-sub { margin-top: 3px; color: #b9c7de; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
@@ -111,7 +111,6 @@ code { padding: 1px 6px; border-radius: 5px; background: var(--ice-100); font: 6
 .hero-track-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 .hero-track-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 auto; border-radius: 12px; color: var(--navy-800); background: var(--ice-100); }
 .hero-track-icon svg { width: 30px; height: 30px; }
-.hero-track-icon .logo-ship { fill: var(--accent); }
 .hero-track h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
 .hero-track-head p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
 .quick-track { display: flex; gap: 8px; padding: 6px; border: 1px solid var(--steel-200); border-radius: 999px; background: var(--paper); }
